@@ -6,15 +6,19 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    # Ваш код, который заполняет обязательные поля
-    elements = browser.find_elements_by_css_selector("[required]")
-    for element in elements:
-        element.send_keys("A")
+    input1 = browser.find_element_by_css_selector(".first_block input.first")
+    input1.send_keys("A")
+	
+    input2 = browser.find_element_by_css_selector(".first_block input.second")
+    input2.send_keys("B")
+	
+    input3 = browser.find_element_by_css_selector(".first_block input.third")
+    input3.send_keys("C")
+	
 
     # Отправляем заполненную форму
     button = browser.find_element_by_css_selector("button.btn")
     button.click()
-
     # Проверяем, что смогли зарегистрироваться
     # ждем загрузки страницы
     time.sleep(1)

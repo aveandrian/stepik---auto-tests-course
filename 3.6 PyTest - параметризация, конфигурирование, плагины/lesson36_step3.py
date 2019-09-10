@@ -21,4 +21,3 @@ def test_guest_should_see_login_link(browser, linktext):
     opt_hint_text = opt_hint.text
     assert opt_hint_text == "Correct!", opt_hint_text
 
-	
